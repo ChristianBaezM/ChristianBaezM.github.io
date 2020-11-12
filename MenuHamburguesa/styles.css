@@ -1,0 +1,87 @@
+* {
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+label
+input
+
+nav, ul {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #b9b8b8;
+    height: 30px;
+    margin: 1px;
+    border: 2px solid black;
+}
+  
+ul {
+    color: white;
+    list-style: none;
+}
+
+@media (max-width: 780px) {
+    /* ocultar la lista */
+    ul {
+        display: none;
+        margin-top: 0;
+        padding: 0;
+        width: 200px;
+    }
+
+    /* cuando el input esté chequeado aparece la ul en bloque */
+    input:checked ~ ul {
+        display: block;
+    }
+
+    /* ocultar el input */
+    input {
+        display: none;
+    }
+
+    label {
+        box-sizing: border-box;
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-weight: bold;
+        text-align: center;
+        user-select: none;
+    }
+
+    li {
+        display: block;
+        background: lightgrey;
+        margin: 0;
+        padding: 10px;
+        list-style: none;
+        border-bottom: 1px solid grey;
+    }
+
+    label:hover {
+        background: grey;
+    }
+
+    input:checked ~ label {
+        background: lightgrey;
+    }
+
+    li:hover {
+        filter: brightness(110%);
+    }
+}
+
